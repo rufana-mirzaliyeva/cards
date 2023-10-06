@@ -1,24 +1,69 @@
-import logo from './logo.svg';
+import 'bulma/css/bulma.css'
 import './App.css';
+import Course from './Course';
+import Angular from './images/angular.jpg';
+import Bootstrap from './images/bootstrap5.png';
+import CSharp from './images/ccsharp.png';
+import KompleWeb from './images/kompleweb.jpg';
 
 function App() {
   return (
+
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <section className = "hero is-link">
+        <div className = "hero-body">
+          <p className = "title">
+            My Course
+          </p>
+        </div>
+      </section>
+
+      <div className='container '>
+
+        <section className="section">
+          <div className='columns'>
+            <div className='column'>
+              <Course
+                image={Angular}
+                title='Angular'
+                description='Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eum, tempora. Lorem ipsum dolor sit am
+      consectetur adipisicing elit. Eum, tempora.'
+              />
+            </div>
+            <div className='column'>
+              <Course
+                image={Bootstrap}
+                title='Bootstarp 5'
+                description='Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eum, tempora. Lorem ipsum dolor sit am
+      consectetur adipisicing elit. Eum, tempora.'
+              />
+            </div>
+            <div className='column'><Course
+              image={KompleWeb}
+              title='Komple Web'
+              description='Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eum, tempora. Lorem ipsum dolor sit am
+      consectetur adipisicing elit. Eum, tempora.'
+            />
+            </div>
+            <div className='column'>
+              <Course
+                image={CSharp}
+                title='C Sharp'
+                description='Lorem ipsum dolor sit amet consectetur
+      adipisicing elit. Eum, tempora. Lorem ipsum dolor sit am
+      consectetur adipisicing elit. Eum, tempora.'
+              />
+            </div>
+          </div>
+
+        </section>
+      </div>
     </div>
+
   );
 }
 
